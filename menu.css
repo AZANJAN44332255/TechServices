@@ -1,0 +1,89 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  background: transparent;
+  color: #fff;
+  z-index: 1000;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar.sticky {
+  background: #FF5733;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffddc1;
+}
+
+.hamburger-menu {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #FF5733;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  z-index: 2000;
+}
+
+.mobile-menu a {
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.mobile-menu .close-menu {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .hamburger-menu {
+    display: block;
+  }
+}
